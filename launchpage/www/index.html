@@ -54,8 +54,7 @@
 		<h2>Native Features Demos:</h2>
 		<a href=""><img src="images/alert.png"/></a>
 		<a href=""><img src="images/camera.png"/></a>
-	  <input value="Your Location"  id="geo" type="submit" data-inline="true" />
-<!--<a href=""><img src="images/geo.png"/> -->
+	  <!-- <input value="Your Location"  id="geo" type="submit" data-inline="true" /> <a href=""><img src="images/geo.png"/> -->
 	</div>
 	</br>
 	</br>
@@ -104,11 +103,14 @@ function error(msg) {
     alert(msg);
 }
 </script>
-
-<div id="location">
+	<div>
+		<p>
+			<a href="#geo" data-theme="a" data-role="button">Click for your location.</a></p>
 	</div>
-  </div>	
-
+		<div data-role="content" id="location"> 
+	</div>
+  </div> 
+   </div>	
 	
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
