@@ -54,13 +54,59 @@
 		<a href=""><img src="images/alert.png"/></a><a href=""><img src="images/geo.png"/></a><a href=""><img src="images/camera.png"/></a>
 	</div>
 	</br>
-	</br>
+	</br>	
+	<script>
+
+    // geolocation button click
+    $('#geo').click(function () {
+        // test for presence of geolocation
+        if (navigator && navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(geo_success, geo_error);
+        } else {
+            error('Geolocation is not supported.');
+        }
+    });
+ 
+function geo_success(position) {
+    printLatLong(position.coords.latitude, position.coords.longitude);
+}
+ 
+// The PositionError object returned contains the following attributes:
+// code: a numeric response code
+// PERMISSION_DENIED = 1
+// POSITION_UNAVAILABLE = 2
+// TIMEOUT = 3
+// message: Primarily for debugging. It's recommended not to show this error
+// to users.
+function geo_error(err) {
+    if (err.code == 1) {
+        error('The user denied the request for location information.')
+    } else if (err.code == 2) {
+        error('Your location information is unavailable.')
+    } else if (err.code == 3) {
+        error('The request to get your location timed out.')
+    } else {
+        error('An unknown error occurred while requesting your location.')
+    }
+}
+ 
+// output lat and long
+function printLatLong(lat, long) {
+    $('body').append('<p>Lat: ' + lat + '</p>');
+    $('body').append('<p>Long: ' + long + '</p>');
+}
+ 
+function error(msg) {
+    alert(msg);
+}
+</script>
   </div>	
 
 	
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+		<script src="cordova-1.7.0.js"></script>
 </body>
 
 </html>
