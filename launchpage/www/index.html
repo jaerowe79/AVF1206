@@ -57,6 +57,8 @@
 <!--<a href=""><img src="images/geo.png"/> </a> -->
 	<a href=""><img src="images/camera.png"/></a>
 	</div>
+	<div id="location">
+	</div>
 	</br>
 	</br>
 	<script>
@@ -96,8 +98,8 @@ function geo_error(err) {
  
 // output lat and long
 function printLatLong(lat, long) {
-    $('body').append('<p>Lat: ' + lat + '</p>');
-    $('body').append('<p>Long: ' + long + '</p>');
+    $('location').append('<p>Lat: ' + lat + '</p>');
+    $('location').append('<p>Long: ' + long + '</p>');
 }
  
 function error(msg) {
