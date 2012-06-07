@@ -65,4 +65,8 @@ a{
 	margin: 5px;
 	color: #49c9e6;
 }
+#container {
+	width:100%;
+	height:100%;
+}
 
