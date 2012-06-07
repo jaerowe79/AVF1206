@@ -1,0 +1,68 @@
+/*Janis Jae Hines
+AVF Launch Page
+Term 1206 
+May 31, 2012*/
+
+
+body{
+	font-style: regular;
+	font-family: Georgia, serif;
+	width: auto;
+	margin-left: 5px;
+	font-size: 16px;
+	color: #49c9e6;
+	/*background-image:url('images/stars.png');*/
+}
+#header{
+	background-color:#ffffff;
+	color: #49c9e6;
+	width: 600px;
+	padding:10px;
+	margin:8px;
+}
+#crud{
+	background-color:#ffffff;
+	padding: 10px, 5px;
+	margin: 5px;
+	height: 200px;
+	width: 300px;
+	float: left;
+}
+h3{
+	color:#43c0e5;
+}
+a{
+	margin:20px;
+}
+#discussions{
+	background-color: #ffffff;
+	padding: 5px;
+	margin: 5px;
+	height: 200px;
+	width: 300px;
+}
+#content{
+	height:300px;
+	width:300px;
+	float:left;
+}
+#native{
+		margin-top: 20px;
+		padding: 5px;
+		height: 200px;
+		width: 800px;
+		float: left;
+}
+#original,#revised{
+	margin-bottom:20px;
+	float:left;
+}
+#original{
+	margin-right: 20px;
+}
+#developer{
+	background-color: #ffffff;
+	margin: 5px;
+	color: #49c9e6;
+}
+

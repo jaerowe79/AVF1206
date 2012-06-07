@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+    <link rel="stylesheet" href="styles.css"/>
+	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+	<script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+    <script type="text/javascript">
+
+
+	// If you want to prevent dragging, uncomment this section
+	/*
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	*/
+	
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	/*
+	function handleOpenURL(url)
+	{
+		// TODO: do something with the url passed in.
+	}
+	*/
+	
+	function onBodyLoad()
+	{		
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	
+	/* When this function is called, Cordova has been initialized and is ready to roll */
+	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
+	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+	for more details -jm */
+	function onDeviceReady()
+	{
+		// do your thing!
+		navigator.notification.alert("Cordova is working")
+	}
+    
+    </script>
+  </head>
+  <body onload="onBodyLoad()">
+      <div id="container" style="width:800">
+          <div id="header">
+              <h1>Jae Hines' AVF Demo Launch Page</h1>
+          </div>
+          <div id="crud">
+              <h3>CRUD Apps:</h3>
+              <a href="https://jaerowe79.cloudant.com/kidtracks/_design%2Fkidtracks/index.html"id="original"><img src="images/original.png"/></a><a href="https://jaerowe79.cloudant.com/kidtracks/_design%2Fkidtracks/index.html"id="revised"><img src="images/revised.png"/></a>
+          </div>
+          <div id="content">
+              <div id="discussions">
+                  <h3>Research:</h3>
+                  <ul>
+                      <p><h4><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=751846&deliveryId=1506910">Week One Discussion</a></h4></p>
+                      <p><h4><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=751853&deliveryId=1506917">Week Two Discussion</a></h4></p>
+                      <p><h4><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=751858&deliveryId=1506922">Week Three Discussion</a></h4></p>
+                  </ul>
+              </div>
+              <div id="developer">
+                  <ul>
+                      <p><h3>Developer Info</h3></p>
+                      <p><h5>Janis Jae Hines</h5></p>
+                      <p><h5>AVF 1206</h5></p>
+                  </ul>
+              </div>
+          </div>
+          <div id="native">
+              <h2>Native Features Demos:</h2>
+              <a href=""><img src="images/alert.png"/></a><a href=""><img src="images/geo.png"/></a><a href=""><img src="images/camera.png"/></a>
+          </div>
+          </br>
+          </br>
+      </div>	
+  </body>
+</html>
