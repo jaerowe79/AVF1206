@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>avfdemo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>launchpage.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3A1251BB1581B63D009EE40D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3AD240EA157ABBEB00F465EA</key>
 		<dict>
 			<key>primary</key>
