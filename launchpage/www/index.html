@@ -111,15 +111,13 @@ function error(msg) {
 }
 
 function alertDismissed() {
-        // do something
+        reload(#index.html);
     }
     //
     $('#alert').click(function () {
         navigator.notification.alert(
-            'This is an alert!',  // message
-            alertDismissed,         // callback
-            'Alert Close',            // title
-            'Done'         			// button name
+            'This is an alert!', 
+            alertDismissed      
         );
     });
 
