@@ -52,8 +52,9 @@
 	</div>
 	<div id="native">
 		<h2>Native Features Demos:</h2>
-		<a href=""><img src="images/alert.png"/></a>
-		<a href=""><img src="images/camera.png"/></a>
+		<a href="#" img id="alert" data-theme="a" data-role="button" data-inline="true" type="submit">Show Alert</a>
+		<!-- <a href="#" img src="images/alert.png id="alert" data-theme="a" data-role="button" data-inline="true" type="submit"/></a>
+		<a href=""><img src="images/camera.png"/></a> -->
 	  <!-- <input value="Your Location"  id="geo" type="submit" data-inline="true" /> <a href=""><img src="images/geo.png"/> -->
 	  <div>
 		<p>
@@ -108,6 +109,22 @@ function printLatLong(lat, long) {
 function error(msg) {
     alert(msg);
 }
+
+function alertDismissed() {
+        // do something
+    }
+    //
+    $('#alert').click(function () {
+        navigator.notification.alert(
+            'This is an alert!',  // message
+            alertDismissed,         // callback
+            'Alert Close',            // title
+            'Done'         			// button name
+        );
+    });
+
+
+
 </script>
 	
    </div>	
