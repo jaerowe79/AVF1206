@@ -34,6 +34,14 @@
 		<a href="https://jaerowe79.cloudant.com/kidtracks/_design%2Fkidtracks/index.html"id="original"><img src="images/original.png"/></a><a href="https://jaerowe79.cloudant.com/kidtracks/_design%2Fkidtracks/index.html"id="revised"><img src="images/revised.png"/></a>
 	</div>
 	<div id="content">
+	
+	<!-- <div class="video">
+        <video id="AvfVideo" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="media/avf-demo-poster.png" onclick="this.play();">
+         <source src="videos/avf-demo.mp4" type='video/mp4'>
+         <source src="videos/avf-demo.WebM" type='video/webm'>
+        </video>
+       </div> -->
+            
 		<div id="discussions">
 			<h3>Research:</h3>
 			<ul>
@@ -52,8 +60,8 @@
 	</div>
 	<div id="native">
 		<h2>Native Features Demos:</h2>
-		<a href="#" img id="alert" data-theme="a" data-role="button" data-inline="true" type="submit">Show Alert</a>
-		<!-- <a href="#" img src="images/alert.png id="alert" data-theme="a" data-role="button" data-inline="true" type="submit"/></a>
+		<p><a href="#" id="alert" data-theme="a" data-role="button" data-inline="true" type="submit" onclick="showAlert(); return false;">Show Alert</a></p>
+	<!-- <a href="#" img src="images/alert.png id="alert" data-theme="a" data-role="button" data-inline="true" type="submit"/></a>
 		<a href=""><img src="images/camera.png"/></a> -->
 	  <!-- <input value="Your Location"  id="geo" type="submit" data-inline="true" /> <a href=""><img src="images/geo.png"/> -->
 	  <div>
@@ -67,6 +75,17 @@
   </div> 
 	</br>
 	<script>
+
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
 
     // geolocation button click
     $('#geo').click(function () {
@@ -110,26 +129,13 @@ function error(msg) {
     alert(msg);
 }
 
-function alertDismissed() {
-        reload(#index.html);
-    }
-    //
-    $('#alert').click(function () {
-        navigator.notification.alert(
-            'This is an alert!', 
-            alertDismissed      
-        );
-    });
-
-
-
 </script>
 	
    </div>	
 	
 	<!-- JavaScript under here -->
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	<script src="cordova-1.7.0.js"></script>
 </body>
 
