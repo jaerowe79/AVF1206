@@ -19,9 +19,11 @@
 		<meta http-equiv="cleartype" content="on">
 		
 		<!-- StyleSheets under here -->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
 		<link rel="stylesheet" href="styles.css"/>
-		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->		
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+			<script src="modernizr.custom.min.js"></script>
+		
 </head>
 	<body>
 	<div id="container">
@@ -41,7 +43,8 @@
          <source src="videos/avf-demo.WebM" type='video/webm'>
         </video>
        </div>
-            
+	</br>
+	</br>
 		<div id="discussions">
 			<h3>Research:</h3>
 			<ul>
@@ -50,93 +53,33 @@
 				<p><h4><a href="http://course.online.fullsail.edu/index.cfm?fuseaction=lms.activitiesDiscussion&activityId=751858&deliveryId=1506922">Week Three Discussion</a></h4></p>
 			</ul>
 		</div>
+		</br>
 		<div id="developer">
 		<ul>
 			<p><h3>Developer Info</h3></p>
-			<p><h5>Janis Jae Hines</h5></p>
+			<p><h5>Janis Jae Rowe</h5></p>
 			<p><h5>AVF 1206</h5></p>
 		</ul>
 		</div>
-	</div>
 	<div id="native">
 		<h2>Native Features Demos:</h2>
-		<p><a href="#" id="alert" data-theme="a" data-role="button" data-inline="true" type="submit" onclick="showAlert(); return false;">Show Alert</a></p>
+		<p><a href="#" id="notif" data-theme="a" data-role="button" data-inline="true" type="submit">Show Alert</a></p>
 	<!-- <a href="#" img src="images/alert.png id="alert" data-theme="a" data-role="button" data-inline="true" type="submit"/></a>
 		<a href=""><img src="images/camera.png"/></a> -->
 	  <!-- <input value="Your Location"  id="geo" type="submit" data-inline="true" /> <a href=""><img src="images/geo.png"/> -->
-	  <div>
 		<p>
 			<a href="#" id="geo" data-theme="a" data-role="button" data-inline="true" type="submit">Click for your location.</a></p>
 	</div>
-		<div data-role="content" id="location"> 
-	</div>
-	</div>
+	</br> 
 	</br>
-  </div> 
-	</br>
-	<script>
-
-    //
-    function showAlert() {
-        navigator.notification.alert(
-            'This is an alert!',  // message
-            alertDismissed,         // callback
-            'Alert Accepted',            // title
-            'Done'                  // buttonName
-        );
-    }
-
-
-    // geolocation button click
-    $('#geo').click(function () {
-        // test for presence of geolocation
-        if (navigator && navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(geo_success, geo_error);
-        } else {
-            error('Geolocation is not supported.');
-        }
-    });
- 
-function geo_success(position) {
-    printLatLong(position.coords.latitude, position.coords.longitude);
-}
- 
-// The PositionError object returned contains the following attributes:
-// code: a numeric response code
-// PERMISSION_DENIED = 1
-// POSITION_UNAVAILABLE = 2
-// TIMEOUT = 3
-// message: Primarily for debugging. It's recommended not to show this error
-// to users.
-function geo_error(err) {
-    if (err.code == 1) {
-        error('The user denied the request for location information.')
-    } else if (err.code == 2) {
-        error('Your location information is unavailable.')
-    } else if (err.code == 3) {
-        error('The request to get your location timed out.')
-    } else {
-        error('An unknown error occurred while requesting your location.')
-    }
-}
- 
-// output lat and long
-function printLatLong(lat, long) {
-    alert('You are at Latitude: ' + lat + ' and Longitude: ' + long);
-}
- 
-function error(msg) {
-    alert(msg);
-}
-
-</script>
-	
-   </div>	
-	
+	</div>
+</div>
 	<!-- JavaScript under here -->
-	<<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<<script src="jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
 	<script src="cordova-1.7.0.js"></script>
+	<script src="video.js"></script>
+	<script src="demo.js"></script>
 </body>
 
 </html>
