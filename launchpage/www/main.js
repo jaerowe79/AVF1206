@@ -1,4 +1,7 @@
 	
+	// Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
     //
     $('#notif').click(function(){
   function alertDismissed() {
@@ -55,4 +58,23 @@ function printLatLong(lat, long) {
 function error(msg) {
     alert(msg);
 }
+
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+        navigator.compass.getCurrentHeading(onSuccess, onError);
+    }
+
+    // onSuccess: Get the current heading
+    //
+    function onSuccess(heading) {
+        alert('You are currently heading: ' + heading);
+    }
+
+    // onError: Failed to get the heading
+    //
+    function onError() {
+        alert('onError!');
+    }
+
 
